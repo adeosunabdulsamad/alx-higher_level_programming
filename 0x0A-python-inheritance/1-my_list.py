@@ -12,6 +12,4 @@ class MyList(list):
 
     def print_sorted(self):
         """This is a function to print ou the list"""
-
-        self.sort()
-        print(self)
+        print(sorted(self))
