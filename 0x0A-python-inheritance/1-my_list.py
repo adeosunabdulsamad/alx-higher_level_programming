@@ -1,4 +1,8 @@
-Class MyList(list):
+#!/usr/bin/python3
+"""This module  is a child class of the class List"""
+
+
+class MyList(list):
     """MyList is a child class of the class List"""
 
     def __init__(self):
@@ -9,5 +13,5 @@ Class MyList(list):
     def print_sorted(self):
         """This is a function to print ou the list"""
 
-        print(self.sort())
-
+        self.sort()
+        print(self)
