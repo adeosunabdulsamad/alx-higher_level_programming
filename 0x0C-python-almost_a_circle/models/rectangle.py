@@ -10,14 +10,19 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """This is the rectangle class constructor"""
-        params =[("width", width), ("height", height), ("x", x), ("y", y)]
-        for name, value in params:
-            if not isinstance(value, int):
-                raise TypeError(f"{name} must be an integer")
-            else:
-                continue
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.__width = None
+        self.__height = None
+        self.__x = None
+        self.__y = None
+        self.set_width(width)
+        self.set_height(height)
+        self.set_x(x)
+        self.set_y(y)
+        params =[("width", self.__width), ("height", self.__height), ("x", self.__x), ("y", self.__y)]
+    def set_width(self, width):
+            if not isinstance(width, int):
+                raise TypeError("width must be an integer")
+            if width <= 0:
+                raise ValueError("width must be > 0")
+        for 
