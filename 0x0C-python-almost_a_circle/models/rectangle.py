@@ -78,3 +78,12 @@ class Rectangle(Base):
         for i in range(self.__height):
             display_width = "#" * self.__width
             print(display_width)
+
+    def __str__(self):
+        """This is the string dunder method for rectangle class"""
+        ide = self.id
+        w = self.__width
+        h = self.__height
+        y = self.__y
+        x = self.__x
+        return f"[Rectangle] ({ide}) {x}/{y} - {w}/{h}"
