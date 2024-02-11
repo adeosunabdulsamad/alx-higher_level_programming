@@ -75,9 +75,13 @@ class Rectangle(Base):
 
     def display(self):
         """This function displays the rectangle"""
+        real_y = self.__y - 1
+        if real_y > 0:
+            print("\n" * real_y)
         for i in range(self.__height):
             display_width = "#" * self.__width
-            print(display_width)
+            display_x = " " * self.__x
+            print(display_x + display_width)
 
     def __str__(self):
         """This is the string dunder method for rectangle class"""
