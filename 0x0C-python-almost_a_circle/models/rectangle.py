@@ -22,10 +22,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """The getter property of width"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """The setter property of width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -34,10 +36,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """The getter property of height"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """The setter property of height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -46,10 +50,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """The getter property of x"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """The setter property of x"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -58,10 +64,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """The getter property of y"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """The setter property of y"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -110,6 +118,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """This method converts the class to a dictionary"""
         dic = {}
         dic["id"] = self.id
         dic["width"] = self.width
