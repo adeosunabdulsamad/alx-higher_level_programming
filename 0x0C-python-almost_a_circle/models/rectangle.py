@@ -86,10 +86,10 @@ class Rectangle(Base):
     def __str__(self):
         """This is the string dunder method for rectangle class"""
         ide = self.id
-        w = self.__width
-        h = self.__height
-        y = self.__y
-        x = self.__x
+        w = self.width
+        h = self.height
+        y = self.y
+        x = self.x
         return f"[Rectangle] ({ide}) {x}/{y} - {w}/{h}"
 
     def update(self, *args, **kwargs):
@@ -108,3 +108,12 @@ class Rectangle(Base):
         if kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        dic = {}
+        dic["id"] = self.id
+        dic["width"] = self.width
+        dic["height"] = self.height
+        dic["y"] = self.y
+        dic["x"] = self.x
+        return dic
